@@ -22,6 +22,7 @@ def dist_points(a,b):
         s2=m.sqrt(s1)
     return s2
 
+
 def angle_lines(a,b):
     s=0
     s2=0
@@ -31,5 +32,21 @@ def angle_lines(a,b):
         s1=s1+((a[i]-b[i])**2)
         s2=m.sqrt(s1)
     return np.arccos(s/s2)
+
+
+def section(m,n,arr1,arr2,internal):
+        arr3=[]
+        i=0
+        if internal==True:
+                while i<3:
+                        p=(m*arr2[i]+n*arr1[i])/(m+n)
+                        arr3.append(p)
+                        i=i+1
+        elif internal==False:
+                while i<3:
+                        p=(m*arr2[i]-n*arr1[i])/(m+n)
+                        arr3.append(p)
+                        i=i+1
+        return arr3
         
                   
