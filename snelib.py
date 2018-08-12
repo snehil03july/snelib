@@ -48,5 +48,17 @@ def section(m,n,arr1,arr2,internal):
                         arr3.append(p)
                         i=i+1
         return arr3
+
+    
+
+def area_triangle(a,b,c):
+        x=np.array([b,c,[1,1,1]])
+        x=np.linalg.det(x)/2
+        y=np.array([a,c,[1,1,1]])
+        y=np.linalg.det(y)/2
+        z=np.array([a,c,[1,1,1]])
+        z=np.linalg.det(z)/2
+        p=m.sqrt(x**2+y**2+z**2)
+        return p
         
                   
